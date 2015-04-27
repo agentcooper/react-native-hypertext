@@ -1,0 +1,13 @@
+{
+  "name": "react-native-hypertext",
+  "description": "React Native module to render hypertext (text with links)",
+  "version": "0.0.1",
+  "author": "Artem Tyurin <artem.tyurin@gmail.com> (http://github.com/agentcooper)",
+  "main": "Hypertext.ios.js",
+  "scripts": {
+    "start": "node_modules/react-native/packager/packager.sh"
+  },
+  "dependencies": {
+    "react-native": "^0.4.0"
+  }
+}
