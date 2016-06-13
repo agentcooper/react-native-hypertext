@@ -20,6 +20,7 @@ var styles = StyleSheet.create({
 });
 
 var splitHypertext = require('./splitHypertext');
+var randomKeyGen = function() { return Math.random().toString(36).substring(7); };
 
 var Hypertext = React.createClass({
   onPress: function(href) {
@@ -37,13 +38,13 @@ var Hypertext = React.createClass({
       input: this.props.children,
 
       onLink: function(text, href) {
-        return <Text style={styles.link} onPress={
+        return <Text style={styles.link} key={randomKeyGen()} onPress={
           this.onPress.bind(this, href)
         }>{text}</Text>;
       },
 
       onText: function(text) {
-        return <Text style={styles.text}>{text}</Text>;
+        return <Text style={styles.text} key={randomKeyGen()}>{text}</Text>;
       }
     });
 

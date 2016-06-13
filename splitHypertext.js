@@ -10,7 +10,6 @@ function splitHypertext(params) {
   });
 
   return split.reduce(function(res, _, index, arr) {
-    
     if (arr[index].indexOf('<a') !== -1 && arr[index + 2].indexOf('</a>') !== -1) {
       var href = arr[index].match(/href="([^\'\"]+)/)[1];
 
@@ -23,7 +22,6 @@ function splitHypertext(params) {
         params.onText.call(that, arr[index])
       );
     }
-    
     return res;
   }, []);
 }
